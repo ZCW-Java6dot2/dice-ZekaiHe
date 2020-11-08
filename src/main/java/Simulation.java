@@ -23,14 +23,8 @@ public class Simulation {
 
     public void printResults(){
         System.out.printf("***\n"+"Simulation of '%d' dice tossed for '%d' times\n"+"***\n\n", numDice, numRuns);
-        String stars = "";
-        Integer binNum;
-        Float percentage;
         for(int i=numDice; i<=numDice*6;i++){
-            stars = genStars(i);
-            binNum = bin.getBin(i-2);
-            percentage = getPercentage(i);
-            System.out.printf("%2d :% 9d: % 4.2f %s\n",i,binNum,percentage,stars);
+            System.out.printf("%2d :% 9d: % 4.2f %s\n",i,bin.getBin(i-2),getPercentage(i),genStars(i));
         }
     }
 
